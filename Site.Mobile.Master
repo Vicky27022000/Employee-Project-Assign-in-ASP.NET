@@ -1,0 +1,67 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Mobile.master.cs" Inherits="EmployeeProjectAssign.Site_Mobile" %>
+<%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 1097px;
+            height: 182px;
+        }
+        .auto-style2 {
+            width: 1154px;
+        }
+        .auto-style3 {
+            width: 99%;
+        }
+        .auto-style4 {
+            width: 64%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <section class="content-wrapper main-content clear-fix">
+        </section>
+    </div>
+            <table class="auto-style4">
+                <tr>
+                    <td class="auto-style2">
+                        <img alt="" class="auto-style1" src="Image/project%20management%20image.jpg" /></td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        <asp:Menu ID="Menu2" runat="server" BackColor="#FFCCFF" OnMenuItemClick="Menu2_MenuItemClick" Orientation="Horizontal">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="Home" Text="Home" Value="Home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="About" Text="About" Value="About"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="Register" Text="Register" Value="Register">
+                                    <asp:MenuItem NavigateUrl="Employee" Text="Employee" Value="Employee"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="Project" Text="Project" Value="Project"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="Login" Text="Login" Value="Login"></asp:MenuItem>
+                            </Items>
+                            <StaticMenuItemStyle HorizontalPadding="70px" />
+                            <StaticMenuStyle HorizontalPadding="180px" VerticalPadding="20px" />
+                        </asp:Menu>
+                        <table class="auto-style3">
+                            <tr>
+                                <td>
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" >
+        </asp:ContentPlaceHolder>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                </table>
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" >
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

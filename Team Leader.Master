@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Team Leader.master.cs" Inherits="EmployeeProjectAssign.Team_Leader" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 57%;
+        }
+        .auto-style2 {
+            width: 734px;
+        }
+        .auto-style3 {
+            height: 271px;
+            width: 1026px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style1">
+            <tr>
+                <td>
+                    <img alt="" class="auto-style3" src="Image/teamlead.jpg" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Menu ID="Menu1" runat="server">
+                        <Items>
+                            <asp:MenuItem Text="Team Leader" Value="Team Leader"></asp:MenuItem>
+                        </Items>
+                        <StaticMenuStyle BackColor="#FFCCCC" HorizontalPadding="450px" VerticalPadding="20px" />
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

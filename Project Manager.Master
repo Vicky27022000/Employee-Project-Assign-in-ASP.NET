@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Project Manager.Master.cs" Inherits="EmployeeProjectAssign.Teamlead" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            margin-bottom: 319px;
+        }
+        .auto-style2 {
+            width: 37%;
+        }
+        .auto-style4 {
+            height: 178px;
+            width: 760px;
+        }
+        .auto-style5 {
+            width: 760px;
+        }
+        .auto-style6 {
+            width: 654px;
+            height: 192px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" class="auto-style1">
+        <div>
+            <table class="auto-style2">
+                <tr>
+                    <td class="auto-style4">
+                        <img alt="" class="auto-style6" src="Image/manager.jpg" /></td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">
+                        <asp:Menu ID="Menu2" runat="server" BackColor="#FFCCFF" OnMenuItemClick="Menu2_MenuItemClick" Orientation="Horizontal">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="All Project" Text="Project Manager" Value="Project Manager"></asp:MenuItem>
+                            </Items>
+                            <StaticMenuItemStyle HorizontalPadding="70px" />
+                            <StaticMenuStyle HorizontalPadding="180px" VerticalPadding="20px" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
